@@ -50,11 +50,24 @@ class _SplashScreenState extends State<SplashScreen>
       body: Center(
         child: FadeTransition(
           opacity: _animation,
-          child: Image.asset(
-            'asset/image/Untitled-1 1.png',
-            width: 300,
-            height: 300,
-          ),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Image.asset(
+              'asset/image/Untitled-1 1.png',
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              'Sistem Akademik',
+              style: TextStyle(
+                color: Color(0xffffffff),
+                fontSize: 30,
+                fontFamily: 'PoppinsEkstraBold',
+              ),
+            )
+          ]),
         ),
       ),
     );

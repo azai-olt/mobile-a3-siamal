@@ -175,7 +175,7 @@ class _TampilanState extends State<Tampilan> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Text(
-                        currentpage != 0 ? " " : "lewati",
+                        currentpage != 2 ? "lewati" : " ",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontFamily: "PoppinsRegular",
