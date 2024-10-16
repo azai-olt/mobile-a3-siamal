@@ -14,6 +14,43 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: PreferredSize(
+      //   preferredSize: Size.fromHeight(50),
+      //   child: ClipRRect(
+      //     borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
+      //     child: AppBar(
+      //       backgroundColor: greencolor,
+      //       flexibleSpace: Padding(
+      //         padding: const EdgeInsets.only(top: 35),
+      //         child: Column(
+      //           crossAxisAlignment: CrossAxisAlignment.center,
+      //           children: [
+      //             Padding(
+      //               padding: const EdgeInsets.only(left: 0),
+      //               child: Text(
+      //                 "Sistem Akademik",
+      //                 style: TextStyle(
+      //                     fontFamily: 'Poppinsmedium',
+      //                     fontSize: 16,
+      //                     color: whitecolor),
+      //               ),
+      //             ),
+      //             Padding(
+      //               padding: const EdgeInsets.only(left: 0, top: 1),
+      //               child: Text(
+      //                 "Universitas Malikussaleh",
+      //                 style: TextStyle(
+      //                     fontFamily: 'PoppinsRegular',
+      //                     fontSize: 12,
+      //                     color: whitecolor),
+      //               ),
+      //             ),
+      //           ],
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -411,6 +448,48 @@ class _HomepageState extends State<Homepage> {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  // Container(
+                  //   width: 100,
+                  //   height: 122,
+                  //   margin: const EdgeInsets.only(top: 9),
+                  //   decoration: const BoxDecoration(
+                  //     // color: Color(0xFFFF9100),
+                  //     gradient: LinearGradient(
+                  //         colors: [Color(0xffFF9100), Color(0xFF00712D)],
+                  //         begin: Alignment.topLeft,
+                  //         end: Alignment.bottomRight),
+                  //     borderRadius: BorderRadius.all(Radius.circular(5)),
+                  //   ),
+                  //   child: const Column(
+                  //     children: [
+                  //       Padding(
+                  //         padding: EdgeInsets.only(top: 8),
+                  //         child: Image(
+                  //           image:
+                  //               AssetImage('asset/image/Order Completed.png'),
+                  //           width: 60,
+                  //           height: 60,
+                  //         ),
+                  //       ),
+                  //       Padding(
+                  //         padding: EdgeInsets.only(top: 15),
+                  //         child: Text(
+                  //           'Tagihan\nUKT',
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //             fontFamily: 'Poppinsmedium',
+                  //             fontSize: 14,
+                  //             color: Color(0xFFFFFFFF),
+                  //             height: 1.1,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                 ],
               ),
             ),

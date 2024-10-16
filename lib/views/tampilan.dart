@@ -9,7 +9,7 @@ List tampilandata = [
     "desk": "aplikasi akademi diperuntukkan kepada seluruh mahasiswa UBE "
   },
   {
-    "judul": "Live Chat",
+    "judul": "Kritik Saran",
     "img": "asset/image/gambar2.png",
     "desk": "Gunakan live chat untuk mempermudah menanyakan masalah"
   },
