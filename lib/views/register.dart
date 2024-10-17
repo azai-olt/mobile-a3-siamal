@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/views/homepage.dart';
 
-class LoginTwo extends StatefulWidget {
-  const LoginTwo({super.key});
+class Register extends StatefulWidget {
+  const Register({super.key});
 
   @override
-  State<LoginTwo> createState() => _LoginTwoState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginTwoState extends State<LoginTwo> {
+class _RegisterState extends State<Register> {
   TextEditingController cUser = TextEditingController();
   TextEditingController cPass = TextEditingController();
   final formKey = GlobalKey<FormState>();
@@ -50,7 +50,7 @@ class _LoginTwoState extends State<LoginTwo> {
         Form(
           key: formKey,
           child: Padding(
-            padding: const EdgeInsets.only(top: 192),
+            padding: const EdgeInsets.only(top: 100),
             child: Container(
               height: double.infinity,
               width: double.infinity,
@@ -67,7 +67,7 @@ class _LoginTwoState extends State<LoginTwo> {
                   const Padding(
                     padding: EdgeInsets.only(top: 10),
                     child: Text(
-                      'Login',
+                      'Regiter',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'PoppinsEkstraBold',
@@ -119,12 +119,6 @@ class _LoginTwoState extends State<LoginTwo> {
                       ),
                       style: TextStyle(color: Colors.black),
                       // Mengatur teks warna
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Username tidak boleh kosong';
-                        }
-                        return null;
-                      },
                     ),
                   ),
                   const Row(
@@ -193,79 +187,109 @@ class _LoginTwoState extends State<LoginTwo> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Column(
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            if (formKey.currentState!.validate()) {
-                              if (cUser.text == 'admin' &&
-                                  cPass.text == 'admin') {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const Homepage()));
-                              } else {
-                                cUser.text = '';
-                                cPass.text = '';
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content:
-                                        Text('Username atau Password Salah'),
-                                  ),
-                                );
-                              }
-                            }
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFFFF9100),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            minimumSize: const Size(double.infinity, 53),
-                          ),
-                          child: const Text(
-                            'Login',
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                            ),
+                        padding: EdgeInsets.only(left: 20, top: 0),
+                        child: Text(
+                          'Konfirmasi Passoword',
+                          // textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontFamily: 'PoppinsRegular',
+                            fontSize: 14,
+                            color: Color(0xFF00712D),
                           ),
                         ),
                       ),
-                      // SizedBox(
-                      //   height: 10,
-                      // ),
-                      // Padding(
-                      //   padding: const EdgeInsets.symmetric(horizontal: 20),
-                      //   child: ElevatedButton(
-                      //     onPressed: () {
-                      //       Navigator.of(context).pushReplacement(
-                      //           MaterialPageRoute(
-                      //               builder: (BuildContext) =>
-                      //                   const Register()));
-                      //     },
-                      //     style: ElevatedButton.styleFrom(
-                      //       backgroundColor: const Color(0x20FF9100),
-                      //       shape: RoundedRectangleBorder(
-                      //         borderRadius: BorderRadius.circular(10),
-                      //       ),
-                      //       minimumSize: const Size(double.infinity, 53),
-                      //     ),
-                      //     child: const Text(
-                      //       'Register',
-                      //       style: TextStyle(
-                      //         fontFamily: 'Poppinsmedium',
-                      //         fontSize: 14,
-                      //         color: Color(0xFFFFFFFF),
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
                     ],
+                  ),
+                  Container(
+                    width: double.infinity,
+                    height: 53,
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    decoration: BoxDecoration(
+                      color: const Color(0x20005A24),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: TextFormField(
+                      controller: cPass,
+                      obscureText: passToggle,
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 15, horizontal: 15),
+                          border:
+                              InputBorder.none, // Menghilangkan border default
+                          hintText:
+                              'Masukkan password', // Placeholder untuk input
+                          hintStyle: TextStyle(
+                            color: Color(0x8000712D),
+                            fontSize: 14,
+                          ),
+                          prefixIcon:
+                              const Icon(Icons.lock, color: Color(0xff00712D)),
+                          suffixIcon: InkWell(
+                            onTap: () {
+                              setState(() {
+                                passToggle = !passToggle;
+                              });
+                            },
+                            child: Icon(
+                              passToggle
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Color(0xff00712D),
+                            ),
+                          )),
+                      style: const TextStyle(color: Colors.black),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Password tidak boleh kosong';
+                        }
+                        return null;
+                      }, // Mengatur teks warna
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          if (cUser.text == 'admin' && cPass.text == 'admin') {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Homepage()));
+                          } else {
+                            cUser.text = '';
+                            cPass.text = '';
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('Username atau Password Salah'),
+                              ),
+                            );
+                          }
+                        }
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFFF9100),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        minimumSize: const Size(double.infinity, 53),
+                      ),
+                      child: const Text(
+                        'Register',
+                        style: TextStyle(
+                          fontFamily: 'Poppinsmedium',
+                          fontSize: 14,
+                          color: Color(0xFFFFFFFF),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

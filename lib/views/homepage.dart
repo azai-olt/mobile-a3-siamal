@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_application_1/info/pesan.dart';
-// import 'package:flutter_application_1/views/detail_pmn.dart';
-// import 'package:flutter_application_1/utils/color.dart';
-
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
