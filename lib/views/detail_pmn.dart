@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/color.dart';
-import 'package:flutter_application_1/views/home.dart';
+import 'package:flutter_application_1/views/homepage.dart';
 
 class pengumuman extends StatefulWidget {
   const pengumuman({super.key});
@@ -22,7 +22,7 @@ class _pengumumanState extends State<pengumuman> {
             GestureDetector(
               onTap: () {
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (BuildContext) => const Home()));
+                    MaterialPageRoute(builder: (BuildContext) => const Homepage()));
               },
               child: Row(
                 children: [
@@ -46,6 +46,7 @@ class _pengumumanState extends State<pengumuman> {
               width: double.infinity,
               height: 515,
               margin: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.only(bottom: 40),
               color: bgcolor,
               child: Column(
                 children: [
@@ -110,13 +111,17 @@ class _pengumumanState extends State<pengumuman> {
                     height: 10,
                   ),
                   Expanded(
-                      child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta accumsan sapien eget ornare. Aliquam id ipsum vitae elit semper hendrerit. Integer mollis in est id tincidunt. Etiam tincidunt enim at ultricies consectetur. Suspendisse faucibus elit quis egestas tincidunt. Nulla interdum eros orci, at malesuada velit porttitor in. Nam blandit lacus vel ante blandit elementum. Morbi id nisi laoreet, faucibus nulla ac, vestibulum magna. Sed in enim id est interdum elementum ut ac magna. Donec urna nisi, volutpat eget tellus sit amet, placerat consectetur neque. Nunc sed quam at leo consectetur maximus. Nulla tincidunt ipsum tincidunt purus fringilla, in bibendum erat suscipit. Phasellus at ultricies odio. Vivamus a euismod nibh, in sodales quam. Integer fringilla porttitor lectus, finibus finibus ipsum convallis ut. Curabitur sit amet commodo tortor, eu pretium nibh.",
-                      style:
-                          TextStyle(fontFamily: 'Poppinsmedium', fontSize: 11),
-                      textAlign: TextAlign.justify,
+                      child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          left: 20, right: 20, bottom: 20, top: 10),
+                      child: Text(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta accumsan sapien eget ornare. Aliquam id ipsum vitae elit semper hendrerit. Integer mollis in est id tincidunt. Etiam tincidunt enim at ultricies consectetur. Suspendisse faucibus elit quis egestas tincidunt. Nulla interdum eros orci, at malesuada velit porttitor in. Nam blandit lacus vel ante blandit elementum. Morbi id nisi laoreet, faucibus nulla ac, vestibulum magna. Sed in enim id est interdum elementum ut ac magna. Donec urna nisi, volutpat eget tellus sit amet, placerat consectetur neque. Nunc sed quam at leo consectetur maximus. Nulla tincidunt ipsum tincidunt purus fringilla, in bibendum erat suscipit. Phasellus at ultricies odio. Vivamus a euismod nibh, in sodales quam. Integer fringilla porttitor lectus, finibus finibus ipsum convallis ut. Curabitur sit amet commodo tortor, eu pretium nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta accumsan sapien eget ornare. Aliquam id ipsum vitae elit semper hendrerit. Integer mollis in est id tincidunt. Etiam tincidunt enim at ultricies consectetur. Suspendisse faucibus elit quis egestas tincidunt. Nulla interdum eros orci, at malesuada velit porttitor in. Nam blandit lacus vel ante blandit elementum. Morbi id nisi laoreet, faucibus nulla ac, vestibulum magna. Sed in enim id est interdum elementum ut ac magna. Donec urna nisi, volutpat eget tellus sit amet, placerat consectetur neque. Nunc sed quam at leo consectetur maximus. Nulla tincidunt ipsum tincidunt purus fringilla, in bibendum erat suscipit. Phasellus at ultricies odio. Vivamus a euismod nibh, in sodales quam. Integer fringilla porttitor lectus, finibus finibus ipsum convallis ut. Curabitur sit amet commodo tortor, eu pretium nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta accumsan sapien eget ornare. Aliquam id ipsum vitae elit semper hendrerit. Integer mollis in est id tincidunt. Etiam tincidunt enim at ultricies consectetur. Suspendisse faucibus elit quis egestas tincidunt. Nulla interdum eros orci, at malesuada velit porttitor in. Nam blandit lacus vel ante blandit elementum. Morbi id nisi laoreet, faucibus nulla ac, vestibulum magna. Sed in enim id est interdum elementum ut ac magna. Donec urna nisi, volutpat eget tellus sit amet, placerat consectetur neque. Nunc sed quam at leo consectetur maximus. Nulla tincidunt ipsum tincidunt purus fringilla, in bibendum erat suscipit. Phasellus at ultricies odio. Vivamus a euismod nibh, in sodales quam. Integer fringilla porttitor lectus, finibus finibus ipsum convallis ut. Curabitur sit amet commodo tortor, eu pretium nibh.",
+                        style: TextStyle(
+                            fontFamily: 'Poppinsmedium', fontSize: 11),
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
                   ))
                 ],

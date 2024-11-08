@@ -8,7 +8,7 @@ import 'package:flutter_application_1/info_matkul/matkul6.dart';
 import 'package:flutter_application_1/info_matkul/matkul7.dart';
 import 'package:flutter_application_1/info_matkul/matkul8.dart';
 import 'package:flutter_application_1/utils/color.dart';
-import 'package:flutter_application_1/views/home.dart';
+import 'package:flutter_application_1/views/homepage.dart';
 
 class informasi extends StatefulWidget {
   const informasi({super.key});
@@ -98,7 +98,7 @@ class _informasiState extends State<informasi> {
                         onTap: () {
                           Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                  builder: (BuildContext) => const Home()));
+                                  builder: (BuildContext) => const Homepage()));
                         },
                         child: Text(
                           "< Kembali",

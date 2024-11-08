@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_application_1/info/pesan.dart';
-// import 'package:flutter_application_1/views/detail_pmn.dart';
-// import 'package:flutter_application_1/utils/color.dart';
+import 'package:flutter_application_1/bahan%20kuliah/bahankuliah.dart';
+import 'package:flutter_application_1/info/pesan.dart';
+import 'package:flutter_application_1/infoakun/infoakun.dart';
+import 'package:flutter_application_1/jadwal%20kuliah/menu_jadwal.dart';
+import 'package:flutter_application_1/khs/info_khs.dart';
+import 'package:flutter_application_1/views/detail_pmn.dart';
+import 'package:flutter_application_1/views/informasi_matkul.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -14,6 +18,43 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: PreferredSize(
+      //   preferredSize: Size.fromHeight(50),
+      //   child: ClipRRect(
+      //     borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
+      //     child: AppBar(
+      //       backgroundColor: greencolor,
+      //       flexibleSpace: Padding(
+      //         padding: const EdgeInsets.only(top: 35),
+      //         child: Column(
+      //           crossAxisAlignment: CrossAxisAlignment.center,
+      //           children: [
+      //             Padding(
+      //               padding: const EdgeInsets.only(left: 0),
+      //               child: Text(
+      //                 "Sistem Akademik",
+      //                 style: TextStyle(
+      //                     fontFamily: 'Poppinsmedium',
+      //                     fontSize: 16,
+      //                     color: whitecolor),
+      //               ),
+      //             ),
+      //             Padding(
+      //               padding: const EdgeInsets.only(left: 0, top: 1),
+      //               child: Text(
+      //                 "Universitas Malikussaleh",
+      //                 style: TextStyle(
+      //                     fontFamily: 'PoppinsRegular',
+      //                     fontSize: 12,
+      //                     color: whitecolor),
+      //               ),
+      //             ),
+      //           ],
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -128,289 +169,379 @@ class _HomepageState extends State<Homepage> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    width: 100,
-                    height: 122,
-                    margin: const EdgeInsets.only(
-                      left: 20,
-                      top: 9,
-                    ),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF00712D),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: const Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Image(
-                            image: AssetImage('asset/image/Vector.png'),
-                            width: 60,
-                            height: 60,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 16),
-                          child: Text(
-                            'Jadwal \n Kuliah',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                              height: 1.1,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const jadwalkuliah()));
+                    },
+                    child: Container(
+                      width: 100,
+                      height: 122,
+                      margin: const EdgeInsets.only(
+                        left: 20,
+                        top: 9,
+                      ),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF00712D),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      child: const Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Image(
+                              image: AssetImage('asset/image/Vector.png'),
+                              width: 60,
+                              height: 60,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(top: 16),
+                            child: Text(
+                              'Jadwal \n Kuliah',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Poppinsmedium',
+                                fontSize: 14,
+                                color: Color(0xFFFFFFFF),
+                                height: 1.1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 15),
-                  Container(
-                    width: 100,
-                    height: 122,
-                    margin: const EdgeInsets.only(top: 9),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFFF9100),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: const Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Image(
-                            image: AssetImage('asset/image/School.png'),
-                            width: 60,
-                            height: 60,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 15),
-                          child: Text(
-                            'Bahan \nKuliah',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                              height: 1.1,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const bahankuliah()));
+                    },
+                    child: Container(
+                      width: 100,
+                      height: 122,
+                      margin: const EdgeInsets.only(top: 9),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFF9100),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      child: const Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Image(
+                              image: AssetImage('asset/image/School.png'),
+                              width: 60,
+                              height: 60,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(top: 15),
+                            child: Text(
+                              'Bahan \nKuliah',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Poppinsmedium',
+                                fontSize: 14,
+                                color: Color(0xFFFFFFFF),
+                                height: 1.1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 15),
-                  Container(
-                    width: 100,
-                    height: 122,
-                    margin: const EdgeInsets.only(top: 9),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF00712D),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: const Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Image(
-                            image: AssetImage('asset/image/Exam.png'),
-                            width: 60,
-                            height: 60,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 15),
-                          child: Text(
-                            'Transkrip\nNilai',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                              height: 1.1,
+                  GestureDetector(
+                    //  onTap: () {
+                    //   Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    //       builder: (BuildContext) => const ()));
+                    // },
+                    child: Container(
+                      width: 100,
+                      height: 122,
+                      margin: const EdgeInsets.only(top: 9),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF00712D),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      child: const Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Image(
+                              image: AssetImage('asset/image/Exam.png'),
+                              width: 60,
+                              height: 60,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(top: 15),
+                            child: Text(
+                              'Transkrip\nNilai',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Poppinsmedium',
+                                fontSize: 14,
+                                color: Color(0xFFFFFFFF),
+                                height: 1.1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 15),
-                  Container(
-                    width: 100,
-                    height: 122,
-                    margin: const EdgeInsets.only(top: 9),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFFF9100),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: const Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Image(
-                            image: AssetImage('asset/image/Book Reading.png'),
-                            width: 60,
-                            height: 60,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 15),
-                          child: Text(
-                            'Informasi\nMatakuliah',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                              height: 1.1,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const informasi()));
+                    },
+                    child: Container(
+                      width: 100,
+                      height: 122,
+                      margin: const EdgeInsets.only(top: 9),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFF9100),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      child: const Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Image(
+                              image: AssetImage('asset/image/Book Reading.png'),
+                              width: 60,
+                              height: 60,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(top: 15),
+                            child: Text(
+                              'Informasi\nMatakuliah',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Poppinsmedium',
+                                fontSize: 14,
+                                color: Color(0xFFFFFFFF),
+                                height: 1.1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 15),
-                  Container(
-                    width: 100,
-                    height: 122,
-                    margin: const EdgeInsets.only(top: 9),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF00712D),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: const Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Image(
-                            image: AssetImage('asset/image/Ereader.png'),
-                            width: 60,
-                            height: 60,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 0),
-                          child: Text(
-                            'Kartu\nRencana\nStudi',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                              height: 1.1,
+                  GestureDetector(
+                    //  onTap: () {
+                    //   Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    //       builder: (BuildContext) => const ()));
+                    // },
+                    child: Container(
+                      width: 100,
+                      height: 122,
+                      margin: const EdgeInsets.only(top: 9),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF00712D),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      child: const Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Image(
+                              image: AssetImage('asset/image/Ereader.png'),
+                              width: 60,
+                              height: 60,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(top: 0),
+                            child: Text(
+                              'Kartu\nRencana\nStudi',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Poppinsmedium',
+                                fontSize: 14,
+                                color: Color(0xFFFFFFFF),
+                                height: 1.1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 15),
-                  Container(
-                    width: 100,
-                    height: 122,
-                    margin: const EdgeInsets.only(top: 9),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFFF9100),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Image.asset(
-                            'asset/image/Knowledge Sharing.png',
-                            width: 60,
-                            height: 60,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 15),
-                          child: Text(
-                            'Kartu Hasil\nStudi',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                              height: 1.1,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const InfoKhs()));
+                    },
+                    child: Container(
+                      width: 100,
+                      height: 122,
+                      margin: const EdgeInsets.only(top: 9),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFF9100),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Image.asset(
+                              'asset/image/Knowledge Sharing.png',
+                              width: 60,
+                              height: 60,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(top: 15),
+                            child: Text(
+                              'Kartu Hasil\nStudi',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Poppinsmedium',
+                                fontSize: 14,
+                                color: Color(0xFFFFFFFF),
+                                height: 1.1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 15),
-                  Container(
-                    width: 100,
-                    height: 122,
-                    margin: const EdgeInsets.only(top: 9),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF00712D),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: const Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Image(
-                            image: AssetImage('asset/image/Info Popup.png'),
-                            width: 60,
-                            height: 60,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 15),
-                          child: Text(
-                            'Kritik\nDan Saran',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                              height: 1.1,
+                  GestureDetector(
+                    //  onTap: () {
+                    //   Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    //       builder: (BuildContext) => const ()));
+                    // },
+                    child: Container(
+                      width: 100,
+                      height: 122,
+                      margin: const EdgeInsets.only(top: 9),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF00712D),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      child: const Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Image(
+                              image: AssetImage('asset/image/Info Popup.png'),
+                              width: 60,
+                              height: 60,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(top: 15),
+                            child: Text(
+                              'Kritik\nDan Saran',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Poppinsmedium',
+                                fontSize: 14,
+                                color: Color(0xFFFFFFFF),
+                                height: 1.1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 15),
-                  Container(
-                    width: 100,
-                    height: 122,
-                    margin: const EdgeInsets.only(top: 9),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFFF9100),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: const Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Image(
-                            image:
-                                AssetImage('asset/image/Order Completed.png'),
-                            width: 60,
-                            height: 60,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 15),
-                          child: Text(
-                            'Tagihan\nUKT',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppinsmedium',
-                              fontSize: 14,
-                              color: Color(0xFFFFFFFF),
-                              height: 1.1,
+                  GestureDetector(
+                    //  onTap: () {
+                    //   Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    //       builder: (BuildContext) => const ()));
+                    // },
+                    child: Container(
+                      width: 100,
+                      height: 122,
+                      margin: const EdgeInsets.only(top: 9),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFF9100),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                      child: const Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Image(
+                              image:
+                                  AssetImage('asset/image/Order Completed.png'),
+                              width: 60,
+                              height: 60,
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(top: 15),
+                            child: Text(
+                              'Tagihan\nUKT',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Poppinsmedium',
+                                fontSize: 14,
+                                color: Color(0xFFFFFFFF),
+                                height: 1.1,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  // Container(
+                  //   width: 100,
+                  //   height: 122,
+                  //   margin: const EdgeInsets.only(top: 9),
+                  //   decoration: const BoxDecoration(
+                  //     // color: Color(0xFFFF9100),
+                  //     gradient: LinearGradient(
+                  //         colors: [Color(0xffFF9100), Color(0xFF00712D)],
+                  //         begin: Alignment.topLeft,
+                  //         end: Alignment.bottomRight),
+                  //     borderRadius: BorderRadius.all(Radius.circular(5)),
+                  //   ),
+                  //   child: const Column(
+                  //     children: [
+                  //       Padding(
+                  //         padding: EdgeInsets.only(top: 8),
+                  //         child: Image(
+                  //           image:
+                  //               AssetImage('asset/image/Order Completed.png'),
+                  //           width: 60,
+                  //           height: 60,
+                  //         ),
+                  //       ),
+                  //       Padding(
+                  //         padding: EdgeInsets.only(top: 15),
+                  //         child: Text(
+                  //           'Tagihan\nUKT',
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //             fontFamily: 'Poppinsmedium',
+                  //             fontSize: 14,
+                  //             color: Color(0xFFFFFFFF),
+                  //             height: 1.1,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                 ],
               ),
             ),
@@ -437,8 +568,8 @@ class _HomepageState extends State<Homepage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      //     builder: (BuildContext) => const pengumuman()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const pengumuman()));
                     },
                     child: Container(
                       width: double.infinity,
@@ -545,8 +676,8 @@ class _HomepageState extends State<Homepage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      //     builder: (BuildContext) => const pengumuman()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const pengumuman()));
                     },
                     child: Container(
                       width: double.infinity,
@@ -653,8 +784,8 @@ class _HomepageState extends State<Homepage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      //     builder: (BuildContext) => const pengumuman()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const pengumuman()));
                     },
                     child: Container(
                       width: double.infinity,
@@ -761,8 +892,8 @@ class _HomepageState extends State<Homepage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      //     builder: (BuildContext) => const pengumuman()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const pengumuman()));
                     },
                     child: Container(
                       width: double.infinity,
@@ -869,8 +1000,8 @@ class _HomepageState extends State<Homepage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      //     builder: (BuildContext) => const pengumuman()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const pengumuman()));
                     },
                     child: Container(
                       width: double.infinity,
@@ -977,8 +1108,8 @@ class _HomepageState extends State<Homepage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      //     builder: (BuildContext) => const pengumuman()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const pengumuman()));
                     },
                     child: Container(
                       width: double.infinity,
@@ -1088,53 +1219,101 @@ class _HomepageState extends State<Homepage> {
       ),
       bottomNavigationBar: BottomAppBar(
         color: Color(0xFFFF9100),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Wrap(
-              spacing: 65,
-              children: <Widget>[
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 37),
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
                 GestureDetector(
                   onTap: () {
-                    // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    //     builder: (BuildContext) => const Pesan()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (BuildContext) => const Pesan()));
                   },
                   child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 5),
                     child: Image.asset('asset/image/Circled Envelope.png'),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 6),
-                  width: 56,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.white,
+                // SizedBox(
+                //   width: 68,
+                // ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (BuildContext) => const Homepage()));
+                  },
+                  child: Container(
+                    width: 56,
+                    height: 56,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.white,
+                    ),
+                    child: Image.asset('asset/image/Home.png'),
                   ),
-                  child: Image.asset('asset/image/Home.png'),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 5),
-                  child: Image.asset('asset/image/Male User.png'),
-                )
+                // SizedBox(
+                //   width: 62,
+                // ),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext) => const infoakun()));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      child: Image.asset('asset/image/Male User.png'),
+                    )),
               ],
             ),
-          ],
-
-          //   IconButton(
-          //     icon: Icon(Icons.home),
-          //     onPressed: () {},
-          //   ),
-          //   IconButton(
-          //     icon: Icon(Icons.notifications),
-          //     onPressed: () {},
-          //   ),
-          //   IconButton(
-          //     icon: Icon(Icons.person),
-          //     onPressed: () {},
-          //   ),
+          ),
         ),
+        // child: Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     Wrap(
+        //       spacing: 65,
+        //       children: <Widget>[
+        //         GestureDetector(
+        //           onTap: () {
+        //             // Navigator.of(context).pushReplacement(MaterialPageRoute(
+        //             //     builder: (BuildContext) => const Pesan()));
+        //           },
+        //           child: Container(
+        //             padding: EdgeInsets.symmetric(vertical: 5),
+        //             child: Image.asset('asset/image/Circled Envelope.png'),
+        //           ),
+        //         ),
+        //         Container(
+        //           padding: EdgeInsets.symmetric(vertical: 6),
+        //           width: 56,
+        //           height: 56,
+        //           decoration: BoxDecoration(
+        //             borderRadius: BorderRadius.circular(15),
+        //             color: Colors.white,
+        //           ),
+        //           child: Image.asset('asset/image/Home.png'),
+        //         ),
+        //         Container(
+        //           padding: EdgeInsets.symmetric(vertical: 5),
+        //           child: Image.asset('asset/image/Male User.png'),
+        //         )
+        //       ],
+        //     ),
+        //   ],
+
+        //   IconButton(
+        //     icon: Icon(Icons.home),
+        //     onPressed: () {},
+        //   ),
+        //   IconButton(
+        //     icon: Icon(Icons.notifications),
+        //     onPressed: () {},
+        //   ),
+        //   IconButton(
+        //     icon: Icon(Icons.person),
+        //     onPressed: () {},
+        //   ),
       ),
     );
   }

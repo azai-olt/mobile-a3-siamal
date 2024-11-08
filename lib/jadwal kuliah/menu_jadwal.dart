@@ -5,6 +5,7 @@ import 'package:flutter_application_1/jadwal%20kuliah/detailjadwal3.dart';
 import 'package:flutter_application_1/jadwal%20kuliah/detailjadwal4.dart';
 import 'package:flutter_application_1/jadwal%20kuliah/detailjadwal5.dart';
 import 'package:flutter_application_1/utils/color.dart';
+import 'package:flutter_application_1/views/homepage.dart';
 
 class jadwalkuliah extends StatefulWidget {
   const jadwalkuliah({super.key});
@@ -52,12 +53,18 @@ class _jadwalkuliahState extends State<jadwalkuliah> {
             children: [
               Padding(
                 padding: EdgeInsets.only(left: 20, top: 12),
-                child: Text(
-                  "< Kembali",
-                  style: TextStyle(
-                      fontFamily: 'PoppinsBold',
-                      fontSize: 20,
-                      color: Colors.black),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (BuildContext) => const Homepage()));
+                  },
+                  child: Text(
+                    "< Kembali",
+                    style: TextStyle(
+                        fontFamily: 'PoppinsBold',
+                        fontSize: 20,
+                        color: Colors.black),
+                  ),
                 ),
               ),
             ],

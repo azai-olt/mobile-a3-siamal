@@ -3,7 +3,7 @@ import 'package:flutter_application_1/khs/khs1.dart';
 import 'package:flutter_application_1/khs/khs2.dart';
 import 'package:flutter_application_1/khs/khs3.dart';
 import 'package:flutter_application_1/utils/color.dart';
-import 'package:flutter_application_1/views/home.dart';
+import 'package:flutter_application_1/views/homepage.dart';
 
 class InfoKhs extends StatefulWidget {
   const InfoKhs({super.key});
@@ -70,7 +70,7 @@ class _InfoKhsState extends State<InfoKhs> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (BuildContext) => const Home()));
+                          builder: (BuildContext) => const Homepage()));
                     },
                     child: Text(
                       "< Kembali",
@@ -219,7 +219,7 @@ class _InfoKhsState extends State<InfoKhs> {
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (buildcontext) => const Home()));
+                          builder: (buildcontext) => const Khs3()));
                     },
                     child: Container(
                       width: 320,
@@ -253,7 +253,7 @@ class _InfoKhsState extends State<InfoKhs> {
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (buildcontext) => const Home()));
+                          builder: (buildcontext) => const Khs3()));
                     },
                     child: Container(
                       width: 320,
@@ -287,7 +287,7 @@ class _InfoKhsState extends State<InfoKhs> {
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (buildcontext) => const Home()));
+                          builder: (buildcontext) => const Khs3()));
                     },
                     child: Container(
                       width: 320,
@@ -321,7 +321,7 @@ class _InfoKhsState extends State<InfoKhs> {
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (buildcontext) => const Home()));
+                          builder: (buildcontext) => const Khs3()));
                     },
                     child: Container(
                       width: 320,
@@ -355,7 +355,7 @@ class _InfoKhsState extends State<InfoKhs> {
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (buildcontext) => const Home()));
+                          builder: (buildcontext) => const Khs3()));
                     },
                     child: Container(
                       width: 320,

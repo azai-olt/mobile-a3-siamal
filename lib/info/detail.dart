@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/info/pesan.dart';
 import 'package:flutter_application_1/utils/color.dart';
-import 'package:flutter_application_1/views/home.dart';
 
 class detailpesan extends StatefulWidget {
   const detailpesan({super.key});
@@ -21,8 +21,8 @@ class _pengumumanState extends State<detailpesan> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (BuildContext) => const Home()));
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (BuildContext) => const Pesan()));
               },
               child: Row(
                 children: [
@@ -82,7 +82,7 @@ class _pengumumanState extends State<detailpesan> {
                             Padding(
                               padding: const EdgeInsets.only(left: 20, top: 20),
                               child: Text(
-                                "Judul Pengumuman",
+                                "ADM Prodi",
                                 style: TextStyle(
                                     fontFamily: 'PoppinsBold',
                                     fontSize: 16,
@@ -105,8 +105,7 @@ class _pengumumanState extends State<detailpesan> {
                   SizedBox(
                     height: 20,
                   ),
-                  Expanded(
-                      child: Column(
+                  Column(
                     children: [
                       Text(
                         "Informasi Pembayaran UKT",
@@ -116,18 +115,19 @@ class _pengumumanState extends State<detailpesan> {
                             color: Colors.black),
                       )
                     ],
-                  )),
-                  SizedBox(
-                    height: 10,
                   ),
                   Expanded(
                       child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta accumsan sapien eget ornare. Aliquam id ipsum vitae elit semper hendrerit. Integer mollis in est id tincidunt. Etiam tincidunt enim at ultricies consectetur. Suspendisse faucibus elit quis egestas tincidunt. Nulla interdum eros orci, at malesuada velit porttitor in. Nam blandit lacus vel ante blandit elementum. Morbi id nisi laoreet, faucibus nulla ac, vestibulum magna. Sed in enim id est interdum elementum ut ac magna. Donec urna nisi, volutpat eget tellus sit amet, placerat consectetur neque. Nunc sed quam at leo consectetur maximus. Nulla tincidunt ipsum tincidunt purus fringilla, in bibendum erat suscipit. Phasellus at ultricies odio. Vivamus a euismod nibh, in sodales quam. Integer fringilla porttitor lectus, finibus finibus ipsum convallis ut. Curabitur sit amet commodo tortor, eu pretium nibh.",
-                      style:
-                          TextStyle(fontFamily: 'Poppinsmedium', fontSize: 11),
-                      textAlign: TextAlign.justify,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Text(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta accumsan sapien eget ornare. Aliquam id ipsum vitae elit semper hendrerit. Integer mollis in est id tincidunt. Etiam tincidunt enim at ultricies consectetur. Suspendisse faucibus elit quis egestas tincidunt. Nulla interdum eros orci, at malesuada velit porttitor in. Nam blandit lacus vel ante blandit elementum. Morbi id nisi laoreet, faucibus nulla ac, vestibulum magna. Sed in enim id est interdum elementum ut ac magna. Donec urna nisi, volutpat eget tellus sit amet, placerat consectetur neque. Nunc sed quam at leo consectetur maximus. Nulla tincidunt ipsum tincidunt purus fringilla, in bibendum erat suscipit. Phasellus at ultricies odio. Vivamus a euismod nibh, in sodales quam. Integer fringilla porttitor lectus, finibus finibus ipsum convallis ut. Curabitur sit amet commodo tortor, eu pretium nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta accumsan sapien eget ornare. Aliquam id ipsum vitae elit semper hendrerit. Integer mollis in est id tincidunt. Etiam tincidunt enim at ultricies consectetur. Suspendisse faucibus elit quis egestas tincidunt. Nulla interdum eros orci, at malesuada velit porttitor in. Nam blandit lacus vel ante blandit elementum. Morbi id nisi laoreet, faucibus nulla ac, vestibulum magna. Sed in enim id est interdum elementum ut ac magna. Donec urna nisi, volutpat eget tellus sit amet, placerat consectetur neque. Nunc sed quam at leo consectetur maximus. Nulla tincidunt ipsum tincidunt purus fringilla, in bibendum erat suscipit. Phasellus at ultricies odio. Vivamus a euismod nibh, in sodales quam. Integer fringilla porttitor lectus, finibus finibus ipsum convallis ut. Curabitur sit amet commodo tortor, eu pretium nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta accumsan sapien eget ornare. Aliquam id ipsum vitae elit semper hendrerit. Integer mollis in est id tincidunt. Etiam tincidunt enim at ultricies consectetur. Suspendisse faucibus elit quis egestas tincidunt. Nulla interdum eros orci, at malesuada velit porttitor in. Nam blandit lacus vel ante blandit elementum. Morbi id nisi laoreet, faucibus nulla ac, vestibulum magna. Sed in enim id est interdum elementum ut ac magna. Donec urna nisi, volutpat eget tellus sit amet, placerat consectetur neque. Nunc sed quam at leo consectetur maximus. Nulla tincidunt ipsum tincidunt purus fringilla, in bibendum erat suscipit. Phasellus at ultricies odio. Vivamus a euismod nibh, in sodales quam. Integer fringilla porttitor lectus, finibus finibus ipsum convallis ut. Curabitur sit amet commodo tortor, eu pretium nibh.",
+                        style: TextStyle(
+                            fontFamily: 'Poppinsmedium', fontSize: 11),
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
                   ))
                 ],
