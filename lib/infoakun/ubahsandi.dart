@@ -162,7 +162,45 @@ class _ubahsandiState extends State<ubahsandi> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Container(
+                                width: double.infinity,
+                                height: 45,
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 25),
+                                color: Color(0xff1400FF),
+                                child: Center(
+                                    child: const Text(
+                                  "oke",
+                                  style: TextStyle(
+                                    fontFamily: 'Poppinsmedium',
+                                    fontSize: 14,
+                                    color: Color(0xFFFFFFFF),
+                                  ),
+                                )),
+                              ),
+                            )
+                          ],
+                          title: const Text(
+                            "Password berhasil diubah",
+                            style: TextStyle(
+                                fontFamily: 'Poppinsmedium', fontSize: 20),
+                          ),
+                          contentPadding: const EdgeInsets.all(30),
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [Image.asset('asset/image/beenhere.png')],
+                          ),
+                        ));
+              },
               style: ElevatedButton.styleFrom(
                   backgroundColor: orangecolor,
                   shape: RoundedRectangleBorder(

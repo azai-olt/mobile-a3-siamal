@@ -430,24 +430,68 @@ class _EditAkunState extends State<EditAkun> {
       bottomNavigationBar: BottomAppBar(
         color: Colors.white.withOpacity(0.30),
         child: Center(
-          child: Container(
-            width: double.infinity,
-            height: 65,
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: const Color.fromARGB(255, 2, 93, 168)),
-            child: Center(
-              child: Text(
-                "Simpan",
-                style: TextStyle(
-                    fontFamily: 'Poppinssemibold',
-                    fontSize: 25,
-                    color: whitecolor),
-              ),
-            ),
-          ),
-        ),
+            child: ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                              actions: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Container(
+                                        width: double.infinity,
+                                        height: 45,
+                                        margin: const EdgeInsets.symmetric(
+                                            horizontal: 25),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color: Color(0xff1400FF)),
+                                        child: const Center(
+                                          child: Text(
+                                            'oke',
+                                            style: TextStyle(
+                                              fontFamily: 'Poppinsmedium',
+                                              fontSize: 14,
+                                              color: Color(0xFFFFFFFF),
+                                            ),
+                                          ),
+                                        )))
+                              ],
+                              title: const Text(
+                                "Data Diri berhasil diubah",
+                                style: TextStyle(
+                                    fontFamily: 'Poppinsmedium', fontSize: 20),
+                              ),
+                              contentPadding: const EdgeInsets.all(30),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Image.asset(
+                                    'asset/image/beenhere.png',
+                                    width: 71,
+                                    height: 71,
+                                  )
+                                ],
+                              )));
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xff1400FF),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    minimumSize: Size(double.infinity, 65)),
+                child: Center(
+                    child: Text(
+                  "simpan",
+                  style: TextStyle(
+                    fontFamily: 'Poppinsmedium',
+                    fontSize: 14,
+                    color: Color(0xFFFFFFFF),
+                  ),
+                )))),
       ),
       // bottomSheet: Container(
       //   width: double.infinity,
